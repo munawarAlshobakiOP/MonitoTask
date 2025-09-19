@@ -4,12 +4,12 @@ width: 100%;
 max-width: var(--container-max-width);
 margin: 0 auto;
 display: flex;
-justify-content: space-between;
 align-items: center;
 height: 6.25rem;
 padding: 28px var(--container-padding);
 overflow: visible;
 position: relative;
+gap:3rem;
 z-index: 1;
 box-sizing: border-box;
 

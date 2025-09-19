@@ -7,7 +7,6 @@
   --color-secondary-dark: #EEC77E;
  
 
-
 --color-neutral-00:#FDFDFD;
 --color-neutral-10:#EBEEEF;
 --color-neutral-20:#CCD1D2;
@@ -27,10 +26,10 @@
   --color-primary-dark: #002A48;
   --navbar-gap: 3rem;
   --navbar-height: 6.25rem;
-  --navbar-padding: 28px;
+  --navbar-padding: 1.85rem;
   
   /* Fixed alignment variables */
-  --container-max-width: 90rem;
+  --container-max-width: 100rem;
   --container-padding: 5rem;
   
   /* Mobile alignment variables */
