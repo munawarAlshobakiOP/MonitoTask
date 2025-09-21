@@ -5,8 +5,7 @@
   --color-secondary-light: #FCEED5;
   --color-secondary-medium: #F1D092;
   --color-secondary-dark: #EEC77E;
- 
-
+--color-secondary-darker: #FFB775;
 --color-neutral-00:#FDFDFD;
 --color-neutral-10:#EBEEEF;
 --color-neutral-20:#CCD1D2;
@@ -14,12 +13,10 @@
 --color-neutral-80:#242B33;
 --color-neutral-60:#667479;
 --color-neutral-40:#99A2A5;
-
 --color-state-red:#FF564F;
 --color-state-green:#34C759;
 --color-state-orange:#FF912C;
 --color-state-blue:#00A7E7;
-
   --color-primary-main: #003459;
   --color-primary-light: #0078CD;
   --color-primary-medium: #00528C;
@@ -37,22 +34,19 @@
   --mobile-container-padding: 1.25rem;
   --mobile-navbar-height: 3.5625rem;
 
-
   --breakpoint-md: 48rem;
+
+  --box-shadow-Pet-Card:rgba(0, 0, 0, 0.08);
+  --box-shadow:rgba(0, 0, 0, 0.1);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
 
 html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
   overflow-y: auto;
+  background-color: white !important;
 }
 
 body {
@@ -66,6 +60,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
   min-height: 100vh;
+  background-color: var(--background);
+  color: var(--foreground);
 }
 
 * {
@@ -132,8 +128,3 @@ a {
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-}
