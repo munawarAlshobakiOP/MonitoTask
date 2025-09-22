@@ -11,8 +11,8 @@ position:absolute;
   left:0rem;
   top: 37rem;
   }
-`;// Hides children on mobile screens
-const MobileHide = styled.div`
+`;
+export const MobileHide = styled.div`
   @media (max-width: 768px) {
     display: none;
   }

@@ -16,7 +16,7 @@ export default function PetsCategory() {
 
   return (
     <Styles.PetsCategoryContainer>
-      <MobileHide>
+      <Styles.MobileHide>
         <Filters
           selectedGender={selectedGender}
           setSelectedGender={setSelectedGender}
@@ -29,7 +29,7 @@ export default function PetsCategory() {
           maxPrice={maxPrice}
           setMaxPrice={setMaxPrice}
         />
-      </MobileHide>
+      </Styles.MobileHide>
       <PetList
         selectedGender={selectedGender}
         selectedBreed={selectedBreed}
