@@ -63,7 +63,7 @@ export default function NavbarSearch() {
 	const handleSelect = (pet) => {
 		setQuery("");
 		setResults([]);
-		router.push(`/category/search=${pet._id}`); // Navigate to /category/search=<pet._id>
+		router.push(`/category?search=${encodeURIComponent(query)}&id=${pet._id}`); // Navigate to /category?search=<query>&id=<pet._id>
 	};
 
 	return (
@@ -74,7 +74,7 @@ export default function NavbarSearch() {
 				onChange={handleChange}
 				onKeyDown={(e) => {
 					if (e.key === 'Enter' && query) {
-						router.push(`/category/search=${encodeURIComponent(query)}`);
+						router.push(`/category?search=${encodeURIComponent(query)}`);
 					}
 				}}
 				placeholder="Search something here!"
@@ -89,7 +89,7 @@ export default function NavbarSearch() {
 								</CardOption>
 							))}
 							<CardOption style={{ textAlign: 'center', color: '#222', fontWeight: 600, cursor: 'pointer', borderBottom: 'none' }}
-								onClick={() => router.push('/category/search=all')}>
+								onClick={() => router.push('/category?search=all')}>
 								SEE ALL...
 							</CardOption>
 						</>
