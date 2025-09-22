@@ -86,22 +86,30 @@ export const DropdownOption = styled.div`
     color: var(--color-primary-main);
     font-weight: 600;
   `}
-`; export const SortDropdown = styled.div`
+`; 
+export const SortDropdown = styled.div`
+
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+
   position: absolute;
   top: 100%;
   left: 0;
-  background: #fff;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+background: var(--background);
+border: 1px solid var(--color-neutral-20);
+border-radius: 16px;
   margin-top: 4px;
-  min-width: 120px;
-  z-index: 10;
+  min-width: 12.5rem;
+  width: 12.5rem;
+  max-width: 12.5rem;
+
 `;
 export const SortDropdownItem = styled.div`
   padding: 0.5rem 1rem;
   cursor: pointer;
-  background: ${({ $selected }) => ($selected ? '#f0f0f0' : '#fff')};
-  &:hover {
-    background: #e6e6e6;
-  }
-`;
+   font-weight: 500;
+  font-size: 16px;
+  line-height: 23px;
+  color: var(--color-primary-dark);
+  `

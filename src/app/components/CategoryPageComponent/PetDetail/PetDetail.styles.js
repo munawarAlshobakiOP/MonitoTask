@@ -53,6 +53,9 @@ export const ShareSocialMedia = styled.div`
 	align-items: center;
 	gap: 0.5rem;
     margin-right: auto;
+@media (max-width: var(--breakpoint-md)) {
+dispaly: none;
+}	
 `;
 
 export const ShareTitle = styled.div`
@@ -278,6 +281,12 @@ export const PetTitleHeader = styled.div`
 display: flex;
 flex-direction: column;
 align-items: flex-start;
+@media (max-width: 768px) {
+
+background: var(--background);
+box-shadow: 0px -6px 6px rgba(0, 0, 0, 0.06);
+
+}
 `;
 export const SkuText = styled.p`
 font-weight: 500;

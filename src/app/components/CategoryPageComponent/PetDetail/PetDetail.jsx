@@ -13,8 +13,16 @@ import { useCurrency } from "@/app/assets/Functions/CurrencyContext";
 
 
 export default function PetDetail({ params }) {
+    let petId;
     const unwrappedParams = typeof params?.then === 'function' ? React.use(params) : params;
-    const petId = unwrappedParams.Pet;
+    if (unwrappedParams && unwrappedParams.Pet) {
+        petId = unwrappedParams.Pet;
+    } else {
+        if (typeof window !== 'undefined') {
+            const urlParams = new URLSearchParams(window.location.search);
+            petId = urlParams.get('Pet') || urlParams.get('id');
+        }
+    }
     const pet = Dogs.find((p) => p._id === parseInt(petId));
     const [selectedImageIndex, setSelectedImageIndex] = useState(0);
     const { currency, convert } = useCurrency();
@@ -44,10 +52,7 @@ export default function PetDetail({ params }) {
                         ))}
                     </Styles.ImageList>
                 </Styles.PetSelectionImage>
-                <Styles.PetHealthGuarantee>
-                    <Styles.HealthTitle> <HealthIcon /> 100% health guarantee for pets</Styles.HealthTitle>
-                    <Styles.GuaranteeTitle> <Gaurentte /> 100% guarantee of pet identification</Styles.GuaranteeTitle>
-                </Styles.PetHealthGuarantee>
+
                 <Styles.ShareSocialMedia>
                     <Styles.ShareTitle> <ShareIcon />Share:</Styles.ShareTitle>
                     <Styles.SocialIcons>
@@ -98,10 +103,13 @@ export default function PetDetail({ params }) {
                                 </Styles.DescriptionSections>
                             ))}
                         </Styles.PetDescription>
+                        <Styles.PetHealthGuarantee>
+                            <Styles.HealthTitle> <HealthIcon /> 100% health guarantee for pets</Styles.HealthTitle>
+                            <Styles.GuaranteeTitle> <Gaurentte /> 100% guarantee of pet identification</Styles.GuaranteeTitle>
+                        </Styles.PetHealthGuarantee>
                     </Styles.PetInfoContainer>
                 </Styles.MobileDetails>
             </Styles.PetImagesContainer>
-            {/* Desktop: show details in original place */}
             <Styles.DesktopDetails>
                 <Styles.PetInfoContainer>
                     <Styles.Path></Styles.Path>

@@ -9,7 +9,7 @@ left: 1rem;
 top: 240.8125rem;
 padding-left:4.625rem;
 
-@media (max-width: 768px) {
+@media (max-width: var(--breakpoint-md)) {
 top: 190rem;
 padding-left:1.3rem;
 left:1rem;;
@@ -19,8 +19,8 @@ export const KnowledgeContainer = styled.div`
  max-width: var(--container-max-width);
 height: 61.625rem;
 
-@media (max-width: 768px) {
-width: var(--mobile-container-max-width);}
+  @media (max-width: var(--breakpoint-md)) {
+    width: var(--mobile-container-max-width);
 `;
 export const KnowledgeHeader = styled.div`
 
@@ -46,7 +46,7 @@ font-weight: 500;
 font-size: 1rem;
 color:#000000;
 white-space: nowrap;
-@media (max-width: 768px) {
+  @media (max-width: var(--breakpoint-md)) {
 
 width: 7.9375rem;
 height: 1.25rem;
@@ -69,7 +69,7 @@ align-items: flex-end;
 text-transform: capitalize;
 color: var(--color-primary-main);
 
-@media (max-width: 768px) {
+  @media (max-width: var(--breakpoint-md)) {
 
 width: 12.625rem;
 height: 2rem;
@@ -81,13 +81,13 @@ line-height: 2rem;
 `;
 export const ViewMoreButtonDesktop=styled.div`
   
- @media (max-width: 768px) {
+  @media (max-width: var(--breakpoint-md)) {
     display: none;
   }
 `;
 export const ViewMoreButtonMobile=styled.div`
     display: none;
-    @media (max-width: 768px) {
+    @media (max-width: var(--breakpoint-md)) {
     display: flex;
     justify-content: center;
     margin-top: 2rem;
@@ -100,7 +100,7 @@ export const KnowledgeList = styled.div`
 display: grid;
 grid-template-columns: repeat(3, 1fr);
 
-@media (max-width: 768px) {
+  @media (max-width: var(--breakpoint-md)) {
 
 grid-template-columns: repeat(1, 1fr);
 grid-template-rows: repeat(1, 1fr);

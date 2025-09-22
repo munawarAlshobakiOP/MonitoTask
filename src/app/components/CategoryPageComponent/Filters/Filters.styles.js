@@ -167,10 +167,16 @@ justify-content: space-between;
 align-items: center;
 padding: 0rem;
 gap: .625rem;
+
 width: 7.1875rem;
 height: 1.25rem;
 border: none;
 color: var(--color-neutral-80);
+
+&:focus {
+  outline: none;
+  box-shadow: none;
+}
 
 `;
 export const BreedLabel=styled.p`

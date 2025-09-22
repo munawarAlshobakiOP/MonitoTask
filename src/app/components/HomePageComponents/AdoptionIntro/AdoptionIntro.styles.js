@@ -12,7 +12,7 @@ top: 214.5rem;
 background: var(--color-secondary-darker);
 border-radius: 1.25rem;
 
-@media (max-width: 768px) {
+@media (max-width: var(--breakpoint-md)) {
 display: none;}
 `;
 export const AdoptionIntroContainer= styled.div`

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const MobileSearchIconContainer = styled.div`
   display: none;
-  @media (max-width: 768px) {
+  @media (max-width: var(--breakpoint-md)) {
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -24,7 +24,7 @@ export const MobileMenuOverlay = styled.div`
   left: 0;
   width: 50%;
   height: 100%;
-  background: rgba(20,20,20,0.85); /* semi-transparent for opacity effect */
+  background: rgba(20,20,20,0.85); 
   display: flex;
   flex-direction: column;
   padding-top:9rem;
@@ -45,6 +45,7 @@ export const MobileMenuContent = styled.div`
 
 
 export const NavbarContainer = styled.nav`
+
 width: 100%;
 max-width: var(--container-max-width);
 margin: 0 auto;
@@ -53,9 +54,9 @@ align-items: center;
 height: 6.25rem;
 padding: 28px var(--container-padding);
 overflow: visible;
-position: relative;
-gap:3rem;
-z-index: 5;
+  position: relative;
+gap: 3rem;
+z-index: 100;
 box-sizing: border-box;
 judstify-content: space-between;
 
@@ -137,7 +138,7 @@ position: relative;
 box-sizing: border-box;
 judstify-content: space-between;
 
-@media (max-width: 768px) {
+@media (max-width: var(--breakpoint-md)) {
   width: auto;
   > *:not(.mobile-search-icon) {
     display: none !important;
@@ -156,7 +157,7 @@ height: 2.75rem;
 border-radius: 2.875rem;
 background-color: var(--color-neutral-00);
 
-@media (max-width: 768px) {
+@media (max-width: var(--breakpoint-md)) {
   padding: 0;
   width: auto;
   height: auto;
@@ -177,7 +178,7 @@ svg {
   flex: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: var(--breakpoint-md)) {
   transform: none;
 
 }
@@ -192,7 +193,7 @@ font-size: .875rem;
 outline: none;
 color: var(--color-neutral-40);
 
-@media (max-width: 768px) {
+@media (max-width: var(--breakpoint-md)) {
   display: none;
 }
 `;
@@ -210,7 +211,7 @@ align-items: center;
 padding: .875rem 1.75rem .875rem;
 cursor: pointer;
 
-@media (max-width: 768px) {
+@media (max-width: var(--breakpoint-md)) {
   display: none;
 }
 `;
@@ -224,7 +225,7 @@ height: 2.75rem;
 position: relative;
 flex-shrink: 0;
 
-@media (max-width: 768px) {
+@media (max-width: var(--breakpoint-md)) {
 display: none;
 }
 `;
@@ -278,10 +279,10 @@ align-items: flex-start;
 position: absolute;
 top: calc(100% + .25rem);
 right: .625rem;
-background: #FFFFFF;
-border: 1px solid #CCD1D2;
+background: var(--background);
+border: 1px solid var(--color-neutral-20);
 border-radius: 16px;
-z-index: 9999;
+z-index: 99;
 width: 6.5rem;
 min-width: fit-content;
 `;
@@ -317,8 +318,8 @@ export const MobileMenuButton = styled.button`
     width: 2rem;
     height: 2rem;
   }
-  
-  @media (max-width: 768px) {
+
+  @media (max-width: var(--breakpoint-md)) {
     display: block;
     position: absolute;
     left: 0;
@@ -331,8 +332,6 @@ export const LogoContainer = styled.div`
 
 `;
 
-
-
 export const NavLink = styled.a`
 `;
 export const MobileMenuLinkContainer = styled.div`
@@ -341,18 +340,7 @@ export const MobileMenuLinkContainer = styled.div`
 
 export const MobileMenuLink = styled.a`
   font-size: 1.25rem;
-  color: #fff;
+  color: var(--background);
   text-decoration: none;
 `;
 
-export const MobileMenuCloseButton = styled.button`
-  margin-top: 2rem;
-  padding: 0.5rem 1.5rem;
-  border-radius: 2rem;
-  border: none;
-  background: #FF564F;
-  color: #fff;
-  font-weight: 600;
-  font-size: 1rem;
-  cursor: pointer;
-`;

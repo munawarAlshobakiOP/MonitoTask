@@ -45,7 +45,6 @@ export default function Navbar() {
         <Styles.CurrencySection>
           <Styles.CurrencyDropdown onClick={() => setIsDropdownOpen(!isDropdownOpen)}>
             <Styles.CurrencySelected>
-              {/* Find currency object by code for logo */}
               {Currency.filter(c => c.code === currency)[0] && (
                 <img src={Currency.filter(c => c.code === currency)[0].logo} alt={currency} width="20" height="20" />
               )}

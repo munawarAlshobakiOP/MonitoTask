@@ -14,7 +14,7 @@ background: var(--color-neutral-00);
 box-shadow: 0rem .25rem 1.75rem -0.125rem var(--box-shadow-Pet-Card);
 border-radius: .75rem;
 
-@media (max-width: 768px) {
+@media (max-width: var(--breakpoint-md)) {
 width: 11.5625rem;
 height: 19.8125rem;
 padding: .5rem;
@@ -31,7 +31,7 @@ height: 16.5rem;
 background: var(--background);
 border-radius: .625rem;
 
-@media (max-width: 768px) {
+@media (max-width: var(--breakpoint-md)) {
 
 width: 10.5625rem;
 height: 10.5625rem;
@@ -46,7 +46,7 @@ height: 264px;
 left: 0px;
 top: 0px;
 cover: contain;
-@media (max-width: 768px) {
+@media (max-width: var(--breakpoint-md)) {
 
 width: 10.5625rem;
 height: 10.5625rem;
@@ -80,7 +80,7 @@ gap: .25rem;
 
 width: 15.5rem;
 height: 4.375rem;
-@media (max-width: 768px) {
+@media (max-width: var(--breakpoint-md)) {
 padding: .25rem;
 gap: .5rem;
 
@@ -105,18 +105,14 @@ width: 15.5rem;
 color: var(--color-neutral-100);
 
 height: 4.375rem;
-@media (max-width: 768px) {
-
+@media (max-width: var(--breakpoint-md)) {
 width: 10.0625rem;
 height: 2.5rem;
-
 font-weight: 700;
 font-size: .875rem;
 line-height: 1.25rem;
 display: flex;
-
 color: var(--color-neutral-100);
-
 }
 `;
 export const PetCardDescription = styled.div`
@@ -156,7 +152,7 @@ font-size:.75rem;
 width: 4.25rem;
 height: 1.125rem;
 color: var(--color-neutral-60);
-@media (max-width: 768px) {
+@media (max-width: var(--breakpoint-md)) {
 font-size:.75rem;}
 `;
 export const Separator = styled.p`
@@ -179,7 +175,7 @@ display: flex;
 align-items: flex-end;
 
 color: var(--color-neutral-100);
-@media (max-width: 768px) {
+@media (max-width: var(--breakpoint-md)) {
 
 width: 6.9375rem;
 height: 1.5rem;

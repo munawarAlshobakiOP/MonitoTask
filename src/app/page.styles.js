@@ -8,7 +8,7 @@ export const PageContainer = styled.div`
     margin: 0 auto;
   }
   
-  @media (max-width: 768px) {
+  @media (max-width: var(--breakpoint-md)) {
     min-height: 480vh;
     padding: 1rem;
     max-width: var(--mobile-container-max-width);
@@ -19,7 +19,7 @@ export const SectionWrapper = styled.div`
   width: 100%;
   margin-bottom: 2rem;
   
-  @media (max-width: 768px) {
+  @media (max-width: var(--breakpoint-md)) {
     margin-bottom: 1rem;
   }
 `;

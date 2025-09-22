@@ -14,7 +14,7 @@ border-radius: 3.5625rem;
 background: transparent;
 width: 100%;
 
-@media (max-width: 768px) {
+@media (max-width: var(--breakpoint-md)) {
 align-items: center;
 padding: .875rem 1.75rem .625rem;
 height: 3rem;
@@ -32,7 +32,7 @@ white-space: nowrap;
 
 color: var(--color-primary-main);
 
-@media (max-width: 768px) {
+  @media (max-width: var(--breakpoint-md)) {
 font-weight: 500;
 font-size: 1rem;
 line-height: 1.5rem;
@@ -41,7 +41,7 @@ line-height: 1.5rem;
 `;
 export const Icon= styled.div`
 
-@media (max-width: 768px) {
+  @media (max-width: var(--breakpoint-md)) {
 width: 24px;
 height: 24px;
 padding-top:.3125rem;

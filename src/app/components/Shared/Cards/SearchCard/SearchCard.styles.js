@@ -30,7 +30,7 @@ export const SearchCardText = styled.div`
 export const SearchCardTitle = styled.div`
   font-size: 0.75rem;
   font-weight: 700;
-  color: #222;
+  color: var(--color-neutral-80);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -38,7 +38,7 @@ export const SearchCardTitle = styled.div`
 
 export const SearchCardDesc = styled.div`
   font-size: 0.9rem;
-  color: #666;
+  color: var(--color-neutral-60);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -48,6 +48,6 @@ export const SearchCardDesc = styled.div`
 export const SearchCardPrice = styled.div`
   font-size: 1rem;
   font-weight: 600;
-  color: #222;
+  color: var(--color-neutral-80);
   margin-top: 0.25rem;
 `;

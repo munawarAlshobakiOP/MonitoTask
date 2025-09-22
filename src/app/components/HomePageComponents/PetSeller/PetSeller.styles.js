@@ -8,7 +8,7 @@ top: 198.8125rem;
 display: block;
 padding-left: 5.8rem;
 
-@media (max-width: 768px) {
+@media (max-width: var(--breakpoint-md)) {
 display: none;}
 
 `;

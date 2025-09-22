@@ -25,8 +25,10 @@ const Dropdown = styled.div`
 	position: absolute;
 	top: 2.5rem;
 	left: 0;
+	min-width: 17.5rem;
 	width: 17.5rem;
-	background: (--color-neutral-00);
+	max-width: 100vw;
+	background: var(--color-neutral-00);
 	box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 	z-index: 9999;
 	border-radius: 4px;
@@ -35,7 +37,20 @@ const Dropdown = styled.div`
 const CardOption = styled.div`
 	cursor: pointer;
 	padding: 8px;
-	border-bottom: 1px solid #eee;
+	border-bottom: 1px solid var(--color-neutral-10);
+	text-align: left;
+	color: var(--color-neutral-80);
+	font-weight: 400;
+	&.see-all {
+		text-align: center;
+		color: var(--color-neutral-80);
+		font-weight: 600;
+		border-bottom: none;
+	}
+	&.no-options {
+		cursor: default;
+		color: var(--color-neutral-60);
+	}
 	&:last-child {
 		border-bottom: none;
 	}
@@ -63,7 +78,7 @@ export default function NavbarSearch() {
 	const handleSelect = (pet) => {
 		setQuery("");
 		setResults([]);
-		router.push(`/category?search=${encodeURIComponent(query)}&id=${pet._id}`); // Navigate to /category?search=<query>&id=<pet._id>
+		router.push(`/category?search=${encodeURIComponent(query)}&Pet=${pet._id}`); 
 	};
 
 	return (
@@ -88,15 +103,16 @@ export default function NavbarSearch() {
 									<SearchCard pet={pet} />
 								</CardOption>
 							))}
-							<CardOption style={{ textAlign: 'center', color: '#222', fontWeight: 600, cursor: 'pointer', borderBottom: 'none' }}
-								onClick={() => router.push('/category?search=all')}>
+							<CardOption className="see-all" onClick={() => router.push('/category?search=all')}>
 								SEE ALL...
 							</CardOption>
 						</>
 					) : (
-						<CardOption style={{ cursor: 'default', color: '#888' }}>
-							No options found
-						</CardOption>
+						query.length > 0 && (
+							<CardOption className="no-options">
+								No options found
+							</CardOption>
+						)
 					)}
 				</Dropdown>
 			)}

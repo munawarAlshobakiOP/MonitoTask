@@ -8,7 +8,7 @@ left: 0rem;
 top: 128.6875rem;
 display:block;
 
-@media (max-width: 768px) {
+@media (max-width: var(--breakpoint-md)) {
   display: none;
 }
 

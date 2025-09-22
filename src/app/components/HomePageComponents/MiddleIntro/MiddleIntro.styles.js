@@ -10,7 +10,7 @@ overflow: hidden;
 display: flex;   
 max-width: var(--container-max-width);  
 
-@media (max-width: 768px) {
+@media (max-width: var(--breakpoint-md)) {
 position: absolute;
 width: 23.875rem;
 height: 40rem;
@@ -36,7 +36,7 @@ z-index: 10;
 
 
 
-@media (max-width: 768px) {
+@media (max-width: var(--breakpoint-md)) {
 position: absolute;
 width: 32.75rem;
 height: 21.8125rem;
@@ -61,7 +61,7 @@ z-index: 12;
 background: var(--color-secondary-light);
 
 
-@media (max-width: 768px) {
+@media (max-width: var(--breakpoint-md)) {
 
 position: absolute;
 width: 37.8144rem;

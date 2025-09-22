@@ -10,7 +10,7 @@ overflow: hidden;
 
 background: linear-gradient(102.87deg, var(--color-secondary-light) 6.43%, var(--color-secondary-light) 78.33%, var(--color-secondary-main) 104.24%);
 border-radius: 0rem 0rem 2.5rem 2.5rem;
-@media (max-width: 768px) {
+@media (max-width: var(--breakpoint-md)) {
 height: 49.625rem;
 
 }
