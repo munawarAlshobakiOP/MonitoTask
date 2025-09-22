@@ -4,7 +4,7 @@ import { Navlinks, SocialMediaIcons, CopyrightLinks } from "@/app/Data/data";
 
 export default function Footer() {
   return (
-<Styles.FooterContainer>
+<Styles.FooterContainer data-testid="footer123">
 <Styles.FooterContent>
   <Styles.FooterLinkRegisterationcontainer>
   <Styles.RegisterContainer>

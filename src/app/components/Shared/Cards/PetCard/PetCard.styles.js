@@ -74,13 +74,13 @@ display: flex;
 flex-direction: column;
 align-items: flex-start;
 padding: 0rem;
+padding-bottom: 5rem;
+margin-top: auto;
 gap: .25rem;
 
 width: 15.5rem;
 height: 4.375rem;
 @media (max-width: 768px) {
-
-
 padding: .25rem;
 gap: .5rem;
 

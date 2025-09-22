@@ -1,39 +1,39 @@
-import './RenderPageNumbers.css';
-import  RightArrowIcon  from '@/app/assets/icons/RightArrow.svg'; 
-import LeftArrowIcon  from '@/app/assets/icons/LeftArrow.svg'; 
-export default function RenderPageNumbers(currentPage, totalPages, setCurrentPage) {
+import  RightArrowIcon  from '@/app/assets/icons/RightArrow'; 
+import LeftArrowIcon  from '@/app/assets/icons/LeftArrow'; 
+import * as Styles from './RenderPage.styles';
+export default function RenderPageNumbers({ currentPage, totalPages, setCurrentPage }) {
   const pages = [];
   for (let i = 1; i <= totalPages; i++) {
     pages.push(
-      <button
-        key={i}
-        onClick={() => setCurrentPage(i)}
-        className={`page-btn${currentPage === i ? ' active' : ''}`}
-      >
-        {i}
-      </button>
+    <Styles.PageBtn
+  key={i}
+  onClick={() => setCurrentPage(i)}
+  className={currentPage === i ? 'active' : ''}
+>
+  {i}
+</Styles.PageBtn>
     );
   }
 
   return (
-    <div className="pagination-container">
-      <button
-        className="arrow-btn"
+    
+    <Styles.PaginationContainer>
+      <Styles.ArrowBtn
         disabled={currentPage === 1}
         onClick={() => setCurrentPage(currentPage - 1)}
       >
-        <LeftArrowIcon className="left-arrow-icon" />
-      </button>
-      <div className="page-numbers">
+        <LeftArrowIcon width={18} height={18} />
+      </Styles.ArrowBtn>
+      <Styles.PageNumbers>
         {pages}
-      </div>
-      <button
-        className="arrow-btn right-arrow"
+      </Styles.PageNumbers>
+      <Styles.ArrowBtn
+        className="right-arrow"
         disabled={currentPage === totalPages}
         onClick={() => setCurrentPage(currentPage + 1)}
       >
-        <RightArrowIcon className="right-arrow-icon" />
-      </button>
-    </div>
+        <RightArrowIcon width={18} height={18} />
+      </Styles.ArrowBtn>
+    </Styles.PaginationContainer>
   );
 }

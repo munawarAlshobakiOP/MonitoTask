@@ -2,11 +2,14 @@
 import UpDownArrow from '@/app/assets/icons/UpDownArrow.jsx';
 import * as Styles from './Filters.styles';
 import { FilterGender, FilterColor, FilterBreed, colorMap } from '@/app/Data/data';
-import { useState } from 'react';
-export default function Filters() {
-    const [selectedGender, setSelectedGender] = useState('');
-    const [selectedBreed, setSelectedBreed] = useState('');
-    const [selectedColor, setSelectedColor] = useState('');
+
+export default function Filters({
+  selectedGender, setSelectedGender,
+  selectedBreed, setSelectedBreed,
+  selectedColor, setSelectedColor,
+  minPrice, setMinPrice,
+  maxPrice, setMaxPrice
+}) {    
 
     const handleGenderChange = (e) => {
         setSelectedGender(e.target.value);
@@ -20,6 +23,14 @@ export default function Filters() {
         setSelectedBreed(e.target.value);
     };
 
+    const handleMinPriceChange = (e) => {
+        setMinPrice(e.target.value);
+    };
+
+    const handleMaxPriceChange = (e) => {
+        setMaxPrice(e.target.value);
+    };
+
     return (
         <Styles.FiltersContainer>
             <Styles.FilterTitle>Filters</Styles.FilterTitle>
@@ -30,7 +41,7 @@ export default function Filters() {
                         {FilterGender.map(gender => (
                             <Styles.OptionRow key={gender}>
                                 <Styles.FilterOption
-                                    type="checkbox"
+                                    type="radio"
                                     name="gender"
                                     value={gender}
                                     checked={selectedGender === gender}
@@ -48,7 +59,7 @@ export default function Filters() {
                         {FilterColor.map(color => (
                             <Styles.OptionRow key={color}>
                                 <Styles.FilterOption
-                                    type="checkbox"
+                                    type="radio"
                                     name="color"
                                     value={color}
                                     checked={selectedColor === color}
@@ -69,11 +80,21 @@ export default function Filters() {
                     <Styles.FilterLabel>Price</Styles.FilterLabel>
                     <Styles.PriceRange>
                         <Styles.PriceInputContainer>
-                            <Styles.PriceInput type="number" placeholder="Min" />
+                            <Styles.PriceInput
+                                type="number"
+                                placeholder="Min"
+                                value={ minPrice ?? ''}
+                                onChange={handleMinPriceChange}
+                            />
                             <UpDownArrow size={14} />
                         </Styles.PriceInputContainer>
                         <Styles.PriceInputContainer>
-                            <Styles.PriceInput type="number" placeholder="Max" />
+                            <Styles.PriceInput
+                                type="number"
+                                placeholder="Max"
+                                value={maxPrice ?? ''}
+                                onChange={handleMaxPriceChange}
+                            />
                             <UpDownArrow size={14} />
                         </Styles.PriceInputContainer>
                     </Styles.PriceRange>
@@ -85,7 +106,7 @@ export default function Filters() {
                         {FilterBreed.map(breed => (
                             <Styles.OptionRow key={breed}>
                                 <Styles.FilterOption
-                                    type="checkbox"
+                                    type="radio"
                                     name="breed"
                                     value={breed}
                                     checked={selectedBreed === breed}

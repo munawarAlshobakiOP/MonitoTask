@@ -1,6 +1,9 @@
 import GiftBoxIcon from '@/app/assets/icons/GiftBox.jsx';
 import * as Styles from './ProductCard.styles';
+import { useCurrency } from '@/app/assets/Functions/CurrencyContext';
 export default function ProductCard({ product }) {
+  const { currency, convert } = useCurrency();
+  const convertedPrice = convert(product.price);
   return (
     <Styles.ProductCard>
      <Styles.ProductImageContainer>
@@ -22,7 +25,7 @@ export default function ProductCard({ product }) {
            </Styles.ProductSize>
          )}
        </Styles.DetailsRow>
-       <Styles.ProductPrice>{product.price}</Styles.ProductPrice>
+       <Styles.ProductPrice>{convertedPrice.toLocaleString()} {currency}</Styles.ProductPrice>
      </Styles.ProductInfo>
      <Styles.GiftContainer>
       <Styles.GiftIcon>

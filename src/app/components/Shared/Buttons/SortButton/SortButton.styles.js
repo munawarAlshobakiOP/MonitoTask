@@ -97,3 +97,11 @@ export const DropdownOption = styled.div`
   min-width: 120px;
   z-index: 10;
 `;
+export const SortDropdownItem = styled.div`
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  background: ${({ $selected }) => ($selected ? '#f0f0f0' : '#fff')};
+  &:hover {
+    background: #e6e6e6;
+  }
+`;

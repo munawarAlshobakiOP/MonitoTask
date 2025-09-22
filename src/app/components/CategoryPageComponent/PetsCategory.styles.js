@@ -1,3 +1,4 @@
+
 import styled from "styled-components";
 export const PetsCategoryContainer = styled.div`
 position:absolute;
@@ -6,4 +7,8 @@ position:absolute;
   display: flex;
   flex-direction: row;
   max-width: var(--container-max-width);
+  @media (max-width: 768px) {
+  left:0rem;
+  top: 37rem;
+  }
 `;

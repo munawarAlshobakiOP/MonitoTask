@@ -1,4 +1,49 @@
 import styled from 'styled-components';
+
+export const MobileSearchIconContainer = styled.div`
+  display: none;
+  @media (max-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: absolute;
+    right: 3rem;
+    top: 0.7rem;
+
+  }
+  svg {
+    fill: var(--color-primary-main);
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+`;
+
+export const MobileMenuOverlay = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: rgba(20,20,20,0.85); /* semi-transparent for opacity effect */
+  display: flex;
+  flex-direction: column;
+  padding-top:9rem;
+  pointer-events: ${(props) => (props.open ? 'auto' : 'none')};
+  opacity: ${(props) => (props.open ? 1 : 0)};
+  transform: ${(props) => (props.open ? 'translateX(0)' : 'translateX(-100%)')};
+  transition: opacity 0.7s cubic-bezier(.4,0,.2,1), transform 0.7s cubic-bezier(.4,0,.2,1);
+`;
+
+export const MobileMenuContent = styled.div`
+  
+
+  padding: 2rem;
+ 
+  color: (--color-neutral-00);
+  transition: background 0.3s;
+`;
+
+
 export const NavbarContainer = styled.nav`
 width: 100%;
 max-width: var(--container-max-width);
@@ -10,9 +55,9 @@ padding: 28px var(--container-padding);
 overflow: visible;
 position: relative;
 gap:3rem;
-z-index: 1;
+z-index: 5;
 box-sizing: border-box;
-
+judstify-content: space-between;
 
 @media (max-width: 768px) {
   max-width: (--mobile-container-max-width);
@@ -41,6 +86,7 @@ box-sizing: border-box;
 
 export const DesktopNavLinks = styled.div`
 display: flex;
+
   @media (max-width: 48rem) {
     display: none;
   }
@@ -89,9 +135,13 @@ height: 2.75rem;
 overflow: visible;
 position: relative;
 box-sizing: border-box;
+judstify-content: space-between;
 
 @media (max-width: 768px) {
   width: auto;
+  > *:not(.mobile-search-icon) {
+    display: none !important;
+  }
 }
 `;
 
@@ -284,4 +334,25 @@ export const LogoContainer = styled.div`
 
 
 export const NavLink = styled.a`
+`;
+export const MobileMenuLinkContainer = styled.div`
+  margin: 1rem 0;
+`;
+
+export const MobileMenuLink = styled.a`
+  font-size: 1.25rem;
+  color: #fff;
+  text-decoration: none;
+`;
+
+export const MobileMenuCloseButton = styled.button`
+  margin-top: 2rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 2rem;
+  border: none;
+  background: #FF564F;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
 `;

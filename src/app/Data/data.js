@@ -1,3 +1,10 @@
+export const CustomerImages = [
+  '/Images/Customers/DetailImage1.png',
+  '/Images/Customers/DetailImage2.png',
+  '/Images/Customers/DetailImage3.png',
+  '/Images/Customers/DetailImage4.png',
+  '/Images/Customers/DetailImage5.png',
+];
 import Facebook from '../assets/icons/facebook.jsx';
 import Twitter from '../assets/icons/twitter.jsx';
 import YouTube from '../assets/icons/Youtube.jsx';
@@ -5,7 +12,7 @@ import Instagram from '../assets/icons/Instagram.jsx';
 
 export const Navlinks = [
   { name: 'Home', path: '/' },
-  { name: 'Category', path: '/catergory' },
+  { name: 'Category', path: '/category' },
 ];
 export const colorMap = {
   'Red': '#FF564F',
@@ -70,6 +77,10 @@ export const Dogs = [
       "/Images/Dogs/pet1.png",
       "/Images/Dogs/GoldenRetriever/dog2.jpg",
       "/Images/Dogs/GoldenRetriever/dog3.jpg",
+      "/Images/Dogs/GoldenRetriever/dog3.jpg",
+      "/Images/Dogs/GoldenRetriever/dog3.jpg",
+      "/Images/Dogs/GoldenRetriever/dog3.jpg",
+
       "/Images/Dogs/GoldenRetriever/dog4.jpg"
     ],
     "age": "02 months",
@@ -411,7 +422,7 @@ export const Dogs = [
     "_id": 16,
     "SKU": 10016,
     "images": [
-      "/Images/Dogs/pet9.png",
+      "/Images/Dogs/pet5.png",
       "/Images/Dogs/GoldenRetriever/dog2.jpg",
       "/Images/Dogs/GoldenRetriever/dog3.jpg",
       "/Images/Dogs/GoldenRetriever/dog4.jpg"
@@ -480,7 +491,7 @@ export const Dogs = [
     "_id": 19,
     "SKU": 10019,
     "images": [
-      "/Images/Dogs/pet13.png",
+      "/Images/Dogs/pet3.png",
       "/Images/Dogs/Bulldog/dog2.jpg",
       "/Images/Dogs/Bulldog/dog3.jpg",
       "/Images/Dogs/Bulldog/dog4.jpg"
@@ -618,7 +629,7 @@ export const Dogs = [
     "_id": 25,
     "SKU": 10025,
     "images": [
-      "/Images/Dogs/pet9.png",
+      "/Images/Dogs/pet6.png",
       "/Images/Dogs/Rottweiler/dog2.jpg",
       "/Images/Dogs/Rottweiler/dog3.jpg",
       "/Images/Dogs/Rottweiler/dog4.jpg"

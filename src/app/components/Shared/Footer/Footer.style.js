@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const FooterContainer = styled.footer`
+export const FooterContainer = styled.div`
 max-width: var(--container-max-width);
 margin: 0 auto;
 height: 27.5rem;
@@ -15,7 +15,7 @@ align-items: center;
     width: var(--mobile-container-max-width);
     height: 37.375rem;
 border-radius: 1.25rem 1.25rem 0rem 0rem;
-align-items: flex-start; /* Content moves to the top */
+align-items: flex-start; 
 padding-top:2.8125rem;
   }
 `;
@@ -30,6 +30,8 @@ flex-direction: column;
 align-items: flex-start;
 gap: 2.5rem;
 height: 15rem;
+@media (max-width: 768px) {
+padding-left:1.8125rem;
 
 
 `;
@@ -44,7 +46,8 @@ export const RegisterContainer = styled.div`
   height: 8.5rem;
   border-radius: 1rem;
   padding: 2rem;
-  gap: 1.25rem;
+  gap: 5rem;
+  padding-left:6.8rem;
 
 
   @media (max-width: 768px) {
@@ -151,7 +154,7 @@ padding-top: 1rem;
 gap: 59.0625rem;
 width: 55.7969rem;
 height: 1.1875rem;
-
+  padding-left:6.8rem;
 @media (max-width: 768px) {
 flex-direction: column;
 gap: 1.25rem;
@@ -251,7 +254,7 @@ export const Copyright = styled.div`
   grid-template-areas: "text logo privacy";
   align-items: center;
   gap: 19.7rem;
-  
+  padding-left:6.8rem;
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
     grid-template-areas: 

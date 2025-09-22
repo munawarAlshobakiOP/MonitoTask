@@ -1,16 +1,15 @@
 import styled from 'styled-components';
 
 export const PageContainer = styled.div`
-  min-height: 500vh;
 
   @media (min-width: 769px) {
-    min-height: 540vh;
+    min-height: 600vh;
     max-width: var(--container-max-width);
     margin: 0 auto;
   }
   
   @media (max-width: 768px) {
-    min-height: 4700vh;
+    min-height: 480vh;
     padding: 1rem;
     max-width: var(--mobile-container-max-width);
   }
