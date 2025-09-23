@@ -124,26 +124,35 @@ height: 2.5rem;
 }
 `;
 
-
 export const NavRight = styled.div`
-display: flex;
-align-items: center;
-justify-content: flex-end;
-gap: .875rem;
-flex: 0 0 auto;
-width: 38.4375rem;
-height: 2.75rem;
-overflow: visible;
-position: relative;
-box-sizing: border-box;
-judstify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: .875rem;
+  flex: 0 0 auto;
+  width: 38.4375rem;
+  height: 2.75rem;
+  overflow: visible;
+  position: relative;
+  box-sizing: border-box;
+  justify-content: space-between;
 
-@media (max-width: 768px) {
-  width: auto;
-  > *:not(.mobile-search-icon) {
-    display: none !important;
+  transition: transform 0.5s ease-in-out;
+
+  &.hidden {
+    transform: translateX(100%);
   }
-}
+
+  &.visible {
+    transform: translateX(0);
+  }
+
+  @media (max-width: 768px) {
+    width: auto;
+    > *:not(.mobile-search-icon) {
+      display: none !important;
+    }
+  }
 `;
 
 

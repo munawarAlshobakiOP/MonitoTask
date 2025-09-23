@@ -7,7 +7,7 @@ import { Navlinks,Currency } from "@/app/Data/data.js";
 import SearchIcon from '@/app/assets/icons/SearchIcon.jsx';
 import CurrencySelectIcon from "@/app/assets/icons/CurrencySelectIcon.jsx";
 import MobileMenuIcon from '@/app/assets/icons/MobileMenuIcon.jsx';
-// import NavbarSearch from '@/app/components/Shared/NavBar/NavBarSearch/NavbarSearch.jsx';
+import NavBarSearch from '@/app/components/Shared/NavBar/NavBarSearch/NavBarSearch';
 export default function Navbar() {
   const { currency, setCurrency, currencyRates } = useCurrency();
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -38,7 +38,7 @@ export default function Navbar() {
           <Styles.SearchIconContainer>
             <SearchIcon />
           </Styles.SearchIconContainer>
-          {/* <NavbarSearch /> */}
+         <NavBarSearch /> 
         </Styles.Search>
         <Styles.JoinButton>Join the community</Styles.JoinButton>
         <Styles.CurrencySection>
