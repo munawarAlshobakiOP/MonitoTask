@@ -10,7 +10,7 @@ overflow: hidden;
 display: flex;   
 max-width: var(--container-max-width);  
 
-@media (max-width: var(--breakpoint-md)) {
+@media (max-width:768px) {
 position: absolute;
 width: 23.875rem;
 height: 40rem;
@@ -36,7 +36,7 @@ z-index: 10;
 
 
 
-@media (max-width: var(--breakpoint-md)) {
+@media (max-width: 768px) {
 position: absolute;
 width: 32.75rem;
 height: 21.8125rem;
@@ -61,7 +61,7 @@ z-index: 12;
 background: var(--color-secondary-light);
 
 
-@media (max-width: var(--breakpoint-md)) {
+@media (max-width: 768px) {
 
 position: absolute;
 width: 37.8144rem;
@@ -75,7 +75,7 @@ border-radius: 4.6875rem;
 transform: rotate(11.41deg);
 }
 `;
-export const Traingular2=styled.div`/* Rectangle 1 */
+export const Traingular2=styled.div`
 
 position: absolute;
 width: 49.2212rem;
@@ -121,6 +121,8 @@ white-space: nowrap;
 color: var(--color-primary-dark);
 z-index: 15;
 text-align: right;
+
+
 @media (max-width: 768px) {
 width: 17.4375rem;
 height: 3.375rem;
@@ -163,13 +165,11 @@ z-index: 15;
 `;
 
 export  const MiddleIntroP = styled.p`
-/* Desktop styles */
 position: absolute;
 width: 30.4rem;
 height: 3.75rem;
 left: 41.55rem;
 top: 9.5rem;
-font-style: normal;
 font-weight: 500;
 font-size: 1rem;
 line-height: 1.5rem;
@@ -184,7 +184,6 @@ height: 3.375rem;
 left: 1.25rem;
 top: 8.375rem;
 
-font-style: normal;
 font-weight: 500;
 font-size: .75rem;
 line-height: 1.125rem;

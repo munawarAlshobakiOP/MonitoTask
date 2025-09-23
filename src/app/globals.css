@@ -1,6 +1,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --black:#000000;
   --color-secondary-main: #F7DBA7;
   --color-secondary-light: #FCEED5;
   --color-secondary-medium: #F1D092;
@@ -24,7 +25,7 @@
   --navbar-gap: 3rem;
   --navbar-height: 6.25rem;
   --navbar-padding: 1.85rem;
-  
+  --breakpoint-md:768px;
   /* Fixed alignment variables */
   --container-max-width: 100rem;
   --container-padding: 5rem;

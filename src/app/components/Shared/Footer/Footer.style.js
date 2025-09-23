@@ -11,7 +11,7 @@ align-items: center;
   background: linear-gradient(102.87deg, var(--color-secondary-light) 6.43%, var(--color-secondary-light) 78.33%, var(--color-secondary-dark) 104.24%);
 
 
-  @media (max-width: var(--breakpoint-md)) {
+  @media (max-width: 768px) {
     width: var(--mobile-container-max-width);
     height: 37.375rem;
 border-radius: 1.25rem 1.25rem 0rem 0rem;
@@ -30,7 +30,7 @@ flex-direction: column;
 align-items: flex-start;
 gap: 2.5rem;
 height: 15rem;
-@media (max-width: var(--breakpoint-md)) {
+@media (max-width: 768px) {
 padding-left:1.8125rem;
 
 
@@ -50,7 +50,7 @@ export const RegisterContainer = styled.div`
   padding-left:6.8rem;
 
 
-  @media (max-width: var(--breakpoint-md)) {
+  @media (max-width: 768px) {
 display: flex;
 flex-direction: column;
 align-items: flex-start;
@@ -71,7 +71,7 @@ line-height: 2.25rem;
 text-transform: capitalize;
 color: var(--color-neutral-00);
 
-@media (max-width: var(--breakpoint-md)) {
+@media (max-width: 768px) {
 width: 21.875rem;
 height: 4rem;
 font-weight: 700;
@@ -91,7 +91,7 @@ width: 44.1875rem;
 height: 4.5rem;
 border-radius: .875rem;
 
-@media (max-width: var(--breakpoint-md)) {
+@media (max-width: 768px) {
 flex-direction: column;
 width: 21.875rem;
 height: 8.25rem;
@@ -111,7 +111,7 @@ background: var(--background);
 border: 1px solid var(--color-neutral-40);
 border-radius: .5rem;
 
-@media (max-width: var(--breakpoint-md)) {
+@media (max-width: 768px) {
 width: 20.375rem;
 height: 3rem;
 }
@@ -137,7 +137,7 @@ color: var(--color-neutral-00);
 text-transform: capitalize;
 
 
-@media (max-width: var(--breakpoint-md)) {
+@media (max-width: 768px) {
 width: 20.375rem;
 height: 3rem;
 border-radius: .5rem;
@@ -155,7 +155,7 @@ gap: 59.0625rem;
 width: 55.7969rem;
 height: 1.1875rem;
   padding-left:6.8rem;
-@media (max-width: var(--breakpoint-md)) {
+@media (max-width: 768px) {
 flex-direction: column;
 gap: 1.25rem;
 align-items: center;
@@ -173,7 +173,7 @@ gap: 2rem;
 margin: 0;
 padding: 0;
 
-@media (max-width: var(--breakpoint-md)) {
+@media (max-width: 768px) {
 
 gap: 2.5rem;
 
@@ -210,7 +210,7 @@ gap: 1.8887rem;
 width: 10.1988rem;
 height: 1.1331rem;
 
-@media (max-width: var(--breakpoint-md)) {
+@media (max-width: 768px) {
 padding-left:1rem;
 gap: 2.5rem;
 
@@ -255,7 +255,7 @@ export const Copyright = styled.div`
   align-items: center;
   gap: 19.7rem;
   padding-left:6.8rem;
-  @media (max-width: var(--breakpoint-md)) {
+  @media (max-width: 768px) {
     grid-template-columns: 1fr;
     grid-template-areas: 
       "logo"
@@ -276,7 +276,7 @@ font-weight: 500;
 font-size: .875rem;
 line-height: 1.25rem;
 color: var(--color-neutral-60);
-@media (max-width: var(--breakpoint-md)) {
+@media (max-width: 768px) {
 
 font-weight: 400;
 font-size: .625rem;
@@ -294,7 +294,7 @@ grid-area: logo;
 width: 7.1875rem;
 height: 2.5rem;
 
-@media (max-width: var(--breakpoint-md)) {
+@media (max-width: 768px) {
 width: 7.1875rem;
 height: 2.5rem;
 display: block;
@@ -314,7 +314,7 @@ font-size: .875rem;
 line-height: 1.25rem;
 color: var(--color-neutral-60);
 
-@media (max-width: var(--breakpoint-md)) {
+@media (max-width: 768px) {
 width: auto;
 height: auto;
 font-size: .75rem;

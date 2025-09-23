@@ -7,7 +7,7 @@ height: 61.625rem;
 position: absolute;
 left: 0rem;
 top: 48rem;
-@media (max-width: var(--breakpoint-md)) {
+@media (max-width: 768px) {
 top: 53.125rem;
 
 }
@@ -16,7 +16,7 @@ export const PetsListContainer = styled.div`
  max-width: var(--container-max-width);
 height: 61.625rem;
 padding: 0rem 2.375rem;
-  @media (max-width: var(--breakpoint-md)) {
+  @media (max-width: 768px) {
 width: var(--mobile-container-max-width);}
 
 `;
@@ -29,7 +29,7 @@ display: flex;
     gap: .125rem;
     justify-content: space-between;
     padding: 1.25rem 2.5rem;
-@media (max-width: var(--breakpoint-md)) {
+@media (max-width: 768px) {
     padding-left: 0rem;
     padding-right: 0rem;
 }
@@ -51,8 +51,8 @@ white-space: nowrap;
 display: flex;
 align-items: flex-end;
 
-color: #000000;
-@media (max-width: var(--breakpoint-md)) {
+color: var(--black);
+@media (max-width: 768px) {
 
 width: 5rem;
 height: 1.25rem;
@@ -79,7 +79,7 @@ text-transform: capitalize;
 
 color: var(--color-primary-main);
 
-  @media (max-width: var(--breakpoint-md)) {
+  @media (max-width: 768px) {
 
 width: 19.125rem;
 height: 2rem;
@@ -118,7 +118,7 @@ background: var(--color-neutral-00);
 box-shadow: 0rem .25rem 1.75rem -0.125rem var(--box-shadow-Pet-Card);
 border-radius: .75rem;
 
-  @media (max-width: var(--breakpoint-md)) {
+  @media (max-width: 768px) {
   width: 11.5625rem;
 height: 19.8125rem;
   }
@@ -127,7 +127,7 @@ height: 19.8125rem;
 export const ViewMoreButtonDesktop = styled.div`
   display: flex;
   justify-content: flex-end;
-  @media (max-width: var(--breakpoint-md)) {
+  @media (max-width: 768px) {
     display: none;
   }
 `;
@@ -135,7 +135,7 @@ export const ViewMoreButtonDesktop = styled.div`
 export const ViewMoreButtonMobile = styled.div`
   display: none;
 
-  @media (max-width: var(--breakpoint-md)) {
+  @media (max-width: 768px) {
        display: flex;
     justify-content: center;
     margin-top: 2rem;

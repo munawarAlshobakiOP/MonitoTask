@@ -8,7 +8,7 @@ top: 198.8125rem;
 display: block;
 padding-left: 5.8rem;
 
-@media (max-width: var(--breakpoint-md)) {
+@media (max-width:768px) {
 display: none;}
 
 `;
@@ -46,7 +46,7 @@ line-height: 1.9375rem;
 display: flex;
 align-items: flex-end;
 
-color: #000000;
+color: var(--black);
 gap: .625rem;
 
 `;

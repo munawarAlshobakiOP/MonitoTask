@@ -10,7 +10,7 @@ overflow: hidden;
 
 background: linear-gradient(102.87deg, var(--color-secondary-light) 6.43%, var(--color-secondary-light) 78.33%, var(--color-secondary-main) 104.24%);
 border-radius: 0rem 0rem 2.5rem 2.5rem;
-@media (max-width: var(--breakpoint-md)) {
+@media (max-width: 768px) {
 height: 49.625rem;
 
 }
@@ -56,7 +56,7 @@ line-height: 3.75rem;
 
 `;
 export const HeroBannerTextH2 = styled.h2`
-width: 452px;
+width: 28.25rem;
 height: 3.75rem;
 font-weight: 700;
 font-size: 2.875rem;
@@ -129,7 +129,7 @@ left: 42.4rem;
 top: 22.8rem;
 
 background: var( --color-primary-main);
-border-radius: 99px;
+border-radius: 6.1875rem;
 transform: rotate(9.35deg);
 z-index: 1; 
 overflow: hidden;
@@ -153,7 +153,7 @@ left: 46.5rem;
 top: 16.9rem;
 
 background: var(--color-secondary-main);
-border-radius: 99px;
+border-radius: 6.1875rem;
 transform: rotate(25.23deg);
 z-index: 2;
 @media (max-width: 768px) {
@@ -168,7 +168,6 @@ height: 4.1937rem;
 left: 4.5rem;
 top: 8.8rem;
 
-/* Secondary Color/Mon Yellow */
 background: var(--color-secondary-main);
 border-radius: 1.25rem;
 transform: rotate(25.23deg);

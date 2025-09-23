@@ -1,3 +1,5 @@
+import styled from "styled-components";
+
 export const ImageIndicators = styled.div`
   display: flex;
   justify-content: center;
@@ -6,13 +8,12 @@ export const ImageIndicators = styled.div`
 `;
 
 export const ImageIndicator = styled.span`
-  width: 12px;
-  height: 12px;
+  width: .75rem;
+  height: .75rem;
   border-radius: 50%;
-  background: #ccc;
+  background: var(--color-neutral-20);
   display: inline-block;
 `;
-import styled from "styled-components";
 export const CustomerImagesSection = styled.section`
   width: 100%;
   display: block;
@@ -58,7 +59,7 @@ export const ImagesContainer = styled.div`
   overflow-x: auto;
   width: 85rem;
   &::-webkit-scrollbar {
-    display: none; /* Hide scrollbar for WebKit browsers */
+    display: none; 
   }
   @media (max-width: 768px) {
     padding-left: 0;

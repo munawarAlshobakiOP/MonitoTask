@@ -7,8 +7,8 @@ export const PaginationContainer = styled.div`
 `;
 
 export const ArrowBtn = styled.button`
-  padding: 4px 8px;
-  font-size: 18px;
+  padding: .25rem .5rem;
+  font-size: 1.125rem;
   display: flex;
   align-items: center;
   justify-content: center;

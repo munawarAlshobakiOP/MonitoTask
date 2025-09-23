@@ -6,10 +6,8 @@ export const SortButtonContainer = styled.div`
 `;
 
 export const SortButton = styled.button`
-  /* Active=False */
   box-sizing: border-box;
 
-  /* Auto layout */
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -19,7 +17,7 @@ export const SortButton = styled.button`
   width: 12.5rem;
   height: 2.375rem;
 
-  border: 1px solid var(--color-neutral-20);
+  border: .0625rem solid var(--color-neutral-20);
   border-radius: 1.25rem;
   background: transparent;
   cursor: pointer;

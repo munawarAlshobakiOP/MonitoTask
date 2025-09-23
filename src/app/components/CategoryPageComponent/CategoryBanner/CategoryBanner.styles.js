@@ -85,7 +85,7 @@ font-weight: 800;
 font-size: 2.625rem;
 text-transform: capitalize;
 
-color: #002A48;
+color: var(--color-primary-dark);
 
 
   }
@@ -103,7 +103,7 @@ export const CategoryBannerTextH2 = styled.h2`
   color: var(--color-neutral-00);
   z-index: 3;
   whiter-space: nowrap;
-  @media (max-width: 768px) {/* Thousands more fun! */
+  @media (max-width: 768px) {
 
 height: 2.375rem;
 left: 1rem;

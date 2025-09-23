@@ -11,7 +11,7 @@ export const PageContainer = styled.div`
     margin: 0 auto;
   }
   
-  @media (max-width: var(--breakpoint-md)) {
+  @media (max-width: 768px) {
     min-height: 600vh;
     padding: 1rem;
     max-width: var(--mobile-container-max-width);

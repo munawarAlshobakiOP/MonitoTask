@@ -8,7 +8,7 @@ left: 0rem;
 top: 128.6875rem;
 display:block;
 
-@media (max-width: var(--breakpoint-md)) {
+@media (max-width: 768px) {
   display: none;
 }
 
@@ -45,7 +45,7 @@ line-height: 1.5rem;
 display: flex;
 align-items: flex-end;
 white-space: nowrap;
-color: #000000;
+color: var(--black);
 
 `;
 export const ProductsListHeaderRow = styled.div`

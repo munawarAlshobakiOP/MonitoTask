@@ -45,7 +45,7 @@ white-space: nowrap;
 display: flex;
 align-items: flex-end;
 
-color: #000000;
+color: var(--black);
 @media (max-width: 768px) {
 
 width: 5rem;
@@ -54,9 +54,8 @@ height: 1.25rem;
 font-style: normal;
 font-weight: 500;
 font-size: .875rem;
-line-height: 1.25rem;
 
-padding-bottom: 35px;
+padding-bottom: 2.1875rem;
 }
 `;
 export  const PetP = styled.p`

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const MobileSearchIconContainer = styled.div`
   display: none;
-  @media (max-width: var(--breakpoint-md)) {
+  @media (max-width: 768px) {
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -88,7 +88,7 @@ box-sizing: border-box;
 export const DesktopNavLinks = styled.div`
 display: flex;
 
-  @media (max-width: 48rem) {
+  @media (max-width: 768px) {
     display: none;
   }
 `;
@@ -138,7 +138,7 @@ position: relative;
 box-sizing: border-box;
 judstify-content: space-between;
 
-@media (max-width: var(--breakpoint-md)) {
+@media (max-width: 768px) {
   width: auto;
   > *:not(.mobile-search-icon) {
     display: none !important;
@@ -157,7 +157,7 @@ height: 2.75rem;
 border-radius: 2.875rem;
 background-color: var(--color-neutral-00);
 
-@media (max-width: var(--breakpoint-md)) {
+@media (max-width: 768px) {
   padding: 0;
   width: auto;
   height: auto;
@@ -170,7 +170,7 @@ background-color: var(--color-neutral-00);
 export const SearchIconContainer = styled.div`
 width: 1.25rem;
 height: 1.25rem;
-transform: translateY(-2px);
+transform: translateY(-.125rem);
 
 svg {
   width: 1.25rem;
@@ -178,7 +178,7 @@ svg {
   flex: none;
 }
 
-@media (max-width: var(--breakpoint-md)) {
+@media (max-width: 768px) {
   transform: none;
 
 }
@@ -193,7 +193,7 @@ font-size: .875rem;
 outline: none;
 color: var(--color-neutral-40);
 
-@media (max-width: var(--breakpoint-md)) {
+@media (max-width: 768px) {
   display: none;
 }
 `;
@@ -211,7 +211,7 @@ align-items: center;
 padding: .875rem 1.75rem .875rem;
 cursor: pointer;
 
-@media (max-width: var(--breakpoint-md)) {
+@media (max-width: 768px) {
   display: none;
 }
 `;
@@ -225,7 +225,7 @@ height: 2.75rem;
 position: relative;
 flex-shrink: 0;
 
-@media (max-width: var(--breakpoint-md)) {
+@media (max-width: 768px) {
 display: none;
 }
 `;
@@ -319,7 +319,7 @@ export const MobileMenuButton = styled.button`
     height: 2rem;
   }
 
-  @media (max-width: var(--breakpoint-md)) {
+  @media (max-width: 768px) {
     display: block;
     position: absolute;
     left: 0;
