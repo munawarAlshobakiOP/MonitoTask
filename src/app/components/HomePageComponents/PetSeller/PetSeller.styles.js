@@ -97,4 +97,8 @@ gap: .625rem;
 export const PetSellerBrandImage = styled.img`
 
 align-items: center;
+
+&:hover {
+  transform: scale(1.2);
+}
 `;

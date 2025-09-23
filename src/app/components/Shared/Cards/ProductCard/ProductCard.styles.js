@@ -14,6 +14,10 @@ background: var(--color-neutral-00);
 box-shadow: 0rem .25rem 1.75rem -0.125rem var(--box-shadow-Pet-Card);
 border-radius: .75rem;
 
+&:hover {
+  transform: scale(1.05);
+}
+
 `;
 export const ProductImageContainer = styled.div`
 

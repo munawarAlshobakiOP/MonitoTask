@@ -17,15 +17,15 @@ export const ImageIndicator = styled.span`
 export const CustomerImagesSection = styled.section`
   width: 100%;
   display: block;
-  height: 61.625rem;
-  position: absolute;
-  left: 0rem;
-  top: 85rem;
+  height: 28.625rem;
+margin-right:auto;  
+margin-top: auto;
   @media (max-width: 768px) {
-    position: static;
-    height: auto;
+  height: 10rem;
     top: 0;
-    padding: 50rem 0;
+    padding-top:50rem;
+
+    padding-bottom:27.875rem;
   }
 `;
 export const SectionTitle = styled.h1`

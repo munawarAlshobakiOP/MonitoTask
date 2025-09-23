@@ -1,6 +1,7 @@
 import styled from "styled-components";
 export const PetListContainer = styled.div`
   padding-left: 5rem;
+  margin-right:auto;
   @media (max-width: 768px) {
     padding-left: 0rem;
     margin-right: auto;

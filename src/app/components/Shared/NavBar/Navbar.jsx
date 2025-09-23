@@ -8,6 +8,7 @@ import SearchIcon from '@/app/assets/icons/SearchIcon.jsx';
 import CurrencySelectIcon from "@/app/assets/icons/CurrencySelectIcon.jsx";
 import MobileMenuIcon from '@/app/assets/icons/MobileMenuIcon.jsx';
 import NavBarSearch from '@/app/components/Shared/NavBar/NavBarSearch/NavBarSearch';
+
 export default function Navbar() {
   const { currency, setCurrency, currencyRates } = useCurrency();
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -38,8 +39,11 @@ export default function Navbar() {
           <Styles.SearchIconContainer>
             <SearchIcon />
           </Styles.SearchIconContainer>
-         <NavBarSearch /> 
+          <NavBarSearch />
         </Styles.Search>
+        <Styles.MobileSearchIconContainer className="mobile-search-icon">
+          <SearchIcon />
+        </Styles.MobileSearchIconContainer>
         <Styles.JoinButton>Join the community</Styles.JoinButton>
         <Styles.CurrencySection>
           <Styles.CurrencyDropdown onClick={() => setIsDropdownOpen(!isDropdownOpen)}>
@@ -71,9 +75,6 @@ export default function Navbar() {
             )}
           </Styles.CurrencyDropdown>
         </Styles.CurrencySection>
-        <Styles.MobileSearchIconContainer className="mobile-search-icon">
-          <SearchIcon />
-        </Styles.MobileSearchIconContainer>
       </Styles.NavRight>
 
       <Styles.MobileMenuOverlay open={isMobileMenuOpen} onClick={() => setIsMobileMenuOpen(false)} aria-hidden={!isMobileMenuOpen}>

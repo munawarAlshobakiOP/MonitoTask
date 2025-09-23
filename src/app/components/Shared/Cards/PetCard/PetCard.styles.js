@@ -9,7 +9,6 @@ gap: .5rem;
 
 width: 17.5rem;
 height: 23.625rem;
-
 background: var(--color-neutral-00);
 box-shadow: 0rem .25rem 1.75rem -0.125rem var(--box-shadow-Pet-Card);
 border-radius: .75rem;
@@ -21,6 +20,9 @@ padding: .5rem;
 
 
 
+}
+&:hover {
+  transform: scale(1.05);
 }
     `;
     export const PetCardImageContainer = styled.div`
@@ -121,7 +123,7 @@ display: flex;
 flex-direction: row;
 align-items: flex-start;
 padding: 0rem;
-gap: .25rem;
+gap: 1rem;
 
 width: 15.5rem;
 height: 1.125rem;

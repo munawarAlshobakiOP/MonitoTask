@@ -14,22 +14,27 @@ border-radius: 0rem 0rem 2.5rem 2.5rem;
 height: 49.625rem;
 
 }
+`;export const HeroBannerContainer = styled.div`
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 10rem 4.8rem 0;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    padding: 5rem 1rem 0;
+  }
 `;
-export const HeroBannerContainer = styled.div`
-max-width: var(--container-max-width);
-align-items: center;
-padding-left:4.8rem;
-padding-top:10rem;
-@media (max-width: 768px) {
-    width: var(--mobile-container-max-width);
-    padding-left:1rem;
-    padding-top:5rem;
-`;
+
 export const HeroBannerContent = styled.div`
-margin: 0 auto;
 display: flex;
 flex-direction: column;
-gap: 1.5rem;
+gap: 1rem;
+
 @media (max-width: 768px) {
 gap:0.7rem;
 }
@@ -42,7 +47,6 @@ font-size: 3.75rem;
 text-transform: capitalize;
 white-space: nowrap;
 color: var(--color-primary-dark);
-position: relative;
 z-index: 2;
 
 
@@ -70,7 +74,6 @@ width: 17.1875rem;
 height: 2.375rem;
 font-weight: 700;
 font-size: 1.75rem;
-line-height: 2.375rem;
 
 }
 
@@ -172,6 +175,7 @@ background: var(--color-secondary-main);
 border-radius: 1.25rem;
 transform: rotate(25.23deg);
 z-index: 1; 
+
 @media (max-width: 768px) {
 
 position: absolute;

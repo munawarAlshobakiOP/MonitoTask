@@ -6,7 +6,7 @@ export const MainContent = styled.div`
 export const PageContainer = styled.div`
  
   @media (min-width: 769px) {
-    min-height: 370vh;
+    min-height: 392vh;
     max-width: var(--container-max-width);
     margin: 0 auto;
   }
@@ -20,7 +20,18 @@ export const PageContainer = styled.div`
 export const SectionWrapper =styled.section``;
 
 export const PageContainerDetail = styled.div`
-display: flex;
-flex-direction: column;
 
+  @media (min-width: 769px) {
+    max-height: 259vh;
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    flex-direction: column;
+
+  }
+  
+  @media (max-width: 768px) {
+    max-height: 400vh;
+    padding: 1rem;
+    max-width: var(--mobile-container-max-width);
+  }
 `;

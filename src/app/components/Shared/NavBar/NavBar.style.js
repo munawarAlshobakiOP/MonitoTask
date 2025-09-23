@@ -2,21 +2,22 @@ import styled from 'styled-components';
 
 export const MobileSearchIconContainer = styled.div`
   display: none;
+
   @media (max-width: 768px) {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    position: absolute;
-    right: 3rem;
-    top: 0.7rem;
-
+    justify-content: flex-start;
+    margin-right: 3rem; 
+    margin-top: 0.7rem; 
   }
+
   svg {
     fill: var(--color-primary-main);
     width: 1.5rem;
     height: 1.5rem;
   }
 `;
+
 
 export const MobileMenuOverlay = styled.div`
   position: fixed;
@@ -43,48 +44,43 @@ export const MobileMenuContent = styled.div`
   transition: background 0.3s;
 `;
 
-
 export const NavbarContainer = styled.nav`
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  height: 6.25rem;
+  padding: 28px var(--container-padding);
+  overflow: visible;
+  position: absolute;
+  gap: 3rem;
+  z-index: 10;
+  box-sizing: border-box;
 
-width: 100%;
-max-width: var(--container-max-width);
-margin: 0 auto;
-display: flex;
-align-items: center;
-height: 6.25rem;
-padding: 28px var(--container-padding);
-overflow: visible;
-  position: relative;
-gap: 3rem;
-z-index: 100;
-box-sizing: border-box;
-judstify-content: space-between;
-
-@media (max-width: 768px) {
-  max-width: (--mobile-container-max-width);
-  height: var(--mobile-navbar-height);
-  padding: 1rem var(--mobile-container-padding);
-}
-
-
+  @media (max-width: 768px) {
+    max-width: var(--mobile-container-max-width); 
+    height: var(--mobile-navbar-height);
+    padding: 1rem var(--mobile-container-padding);
+  }
 `;
 
 export const NavLeft = styled.div`
-display: flex;
-align-items: center;
-gap: var(--navbar-gap);
-flex: 0 0 auto;
-width: 33.0625rem;
-height: 2.5rem;
-box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: var(--navbar-gap);
+  flex: 0 0 auto;
+  width: 33.0625rem;
+  height: 2.5rem;
+  box-sizing: border-box;
 
-@media (max-width: 768px) {
-  width: 100%;
-  justify-content: center;
-  position: relative;
-}
+  @media (max-width: 768px) {
+    width: 100%;
+    justify-content: space-between; 
+
+  }
 `;
-
 export const DesktopNavLinks = styled.div`
 display: flex;
 
@@ -111,18 +107,21 @@ display: flex;
 width: 2.75rem;
 height: 1.5rem;
 color: var(--color-primary-main);
+
 `;
 
 export const Logo = styled.img`
-width: 7.1875rem;
-height: 2.5rem;
+  width: 7.1875rem;
+  height: 2.5rem;
 
-@media (max-width: 768px) {
-  width: 5.75rem;
-  height: 2rem;
-  flex-shrink: 0;
-}
+  @media (max-width: 768px) {
+    width: 5.75rem;
+    height: 2rem;
+    flex-shrink: 0;
+    margin: 0 auto;
+  }
 `;
+
 
 export const NavRight = styled.div`
   display: flex;
@@ -338,7 +337,13 @@ export const MobileMenuButton = styled.button`
   }
 `;
 export const LogoContainer = styled.div`
-
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  @media (max-width: 768px) {
+    justify-content: center;
+    width: 100%;
+  }
 `;
 
 export const NavLink = styled.a`

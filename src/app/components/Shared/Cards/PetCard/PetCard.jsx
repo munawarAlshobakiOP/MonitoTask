@@ -14,7 +14,7 @@ export default function PetCard({ pet }) {
                 <Styles.PetCardTitle>{pet.title}</Styles.PetCardTitle>
                 <Styles.PetCardDescription>
                     <Styles.PetInfo>Gene: {pet.gene}</Styles.PetInfo>
-                    <Styles.PetInfo> . Age: {pet.age}</Styles.PetInfo>
+                    <Styles.PetInfo>Age: {pet.age}</Styles.PetInfo>
                 </Styles.PetCardDescription>
                 <Styles.PetPrice>{convertedPrice.toLocaleString()} {currency}</Styles.PetPrice>
                 </Styles.PetCardC>

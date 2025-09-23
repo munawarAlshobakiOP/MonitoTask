@@ -112,7 +112,7 @@ export  const MiddleIntroH1 = styled.h1`
 position: absolute;
 width: 25.1875rem;
 height: 4.25rem;
-left: 43.25rem;
+left: 44.25rem;
 top: 2.6rem;
 font-weight: 800;
 font-size: 3.25rem;

@@ -104,8 +104,6 @@ justify-content: space-between;
 align-items: flex-start;
 padding: .5625rem .75rem;
 gap: 1rem;
-
-
 background: linear-gradient(102.87deg, var(--color-secondary-light) 6.43%, var(--color-secondary-light) 78.33%, #FFE7BA 104.24%);
 border-radius: 10px;
 @media (max-width: 768px) {
@@ -180,17 +178,16 @@ export const dogImageItem = styled.img`
 
 export const PetDetailSection = styled.section`
   box-sizing: border-box;
-
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  padding: 1.375rem 1.25rem;
   padding-left: 4rem;
   margin-right: 100rem;
+  padding-top: 6.4rem;
   gap: 2.125rem;
   width: 100%;
   max-width: var(--container-max-width);
-  height: 51.625rem;
+  height: 55.625rem;
 
   background: var(--color-neutral-00);
   border: 1px solid var(--color-neutral-10);

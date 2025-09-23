@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const PageContainer = styled.div`
 
   @media (min-width: 769px) {
-    min-height: 600vh;
+    min-height: 520vh;
     max-width: var(--container-max-width);
     margin: 0 auto;
   }

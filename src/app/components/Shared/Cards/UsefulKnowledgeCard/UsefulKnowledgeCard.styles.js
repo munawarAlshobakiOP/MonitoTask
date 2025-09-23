@@ -12,6 +12,7 @@ background: var(--background);
 box-shadow: 0rem .25rem 1.75rem -0.125rem var(--box-shadow-Pet-Card);
 border-radius: .75rem;
 
+
 `;
 export const KnowledgeCardImage= styled.img`
 

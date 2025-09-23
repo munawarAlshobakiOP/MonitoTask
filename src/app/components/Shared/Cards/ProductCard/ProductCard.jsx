@@ -20,7 +20,7 @@ export default function ProductCard({ product }) {
          )}
          {product.size && (
            <Styles.ProductSize>
-             <Styles.DetailsHeader> . size:</Styles.DetailsHeader>
+             <Styles.DetailsHeader>size:</Styles.DetailsHeader>
              {product.size}
            </Styles.ProductSize>
          )}

@@ -1,16 +1,14 @@
 import styled from "styled-components";
 import Link from 'next/link';
 export const PetListSection=styled.section`
-width: 100%;
-display:block;
-height: 61.625rem;
-position: absolute;
-left: 0rem;
-top: 48rem;
-@media (max-width: 768px) {
-top: 53.125rem;
-
-}
+    width: 100%;
+  display: block;
+  height: 61.625rem;
+  margin-top: 44rem; 
+  @media (max-width: 768px) {
+    margin-top: 53.125rem;
+    height: auto; /* maybe adjust height */
+  }
 `;
 export const PetsListContainer = styled.div`
  max-width: var(--container-max-width);
@@ -52,6 +50,7 @@ display: flex;
 align-items: flex-end;
 
 color: var(--black);
+
 @media (max-width: 768px) {
 
 width: 5rem;
@@ -60,7 +59,6 @@ height: 1.25rem;
 font-style: normal;
 font-weight: 500;
 font-size: .875rem;
-line-height: 1.25rem;
 
 padding-bottom: 35px;
 }
@@ -71,8 +69,6 @@ export const PetP = styled.p`
 
 font-weight: 700;
 font-size: 1.5rem;
-line-height: 2.25rem;
-
 display: flex;
 align-items: flex-end;
 text-transform: capitalize;

@@ -3,7 +3,7 @@ export const KnowledgeSection = styled.section`
 
 width: 100%;
 display:block;
-height: 61.625rem;
+height: 0.625rem;
 position: absolute;
 left: 1rem;
 top: 240.8125rem;

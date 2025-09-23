@@ -3,18 +3,19 @@ export  const PetOptionsSection = styled.section`
 
 width: 100%;
 display:block;
-height: 100.625rem;
-position: absolute;
-left: 0rem;
-top: 115rem;
-@media (max-width: 768px) {
-top: 137.125rem;
+height: 42.625rem;
+  margin-top:auto;
+  margin-right:auto;  
+  @media (max-width: 768px) {
+  margin-top:auto;
+
+height: 48.625rem;
 
 }
 `;
 export  const PetsOptionContainer = styled.div`
  max-width: var(--container-max-width);
-height: 61.625rem;
+height: 42rem;
 padding: 0rem 2.375rem;
 @media (max-width: 768px) {
 width: var(--mobile-container-max-width);}

@@ -76,7 +76,6 @@ a {
   text-decoration: none;
 }
 
-/* Fixed alignment container utilities */
 .container {
   width: 100%;
   max-width: var(--container-max-width);
@@ -89,7 +88,6 @@ a {
   padding: 0 var(--container-padding);
 }
 
-/* Mobile container for consistent mobile alignment */
 .mobile-container {
   width: 100%;
   max-width: var(--mobile-container-max-width);
@@ -98,7 +96,6 @@ a {
   box-sizing: border-box;
 }
 
-/* Responsive containers */
 @media (max-width: 1024px) {
   :root {
     --container-padding: 40px;

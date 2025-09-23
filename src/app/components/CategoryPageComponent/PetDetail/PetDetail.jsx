@@ -8,7 +8,6 @@ import ShareIcon from "@/app/assets/icons/ShareIcon";
 import * as Styles from "@/app/components/CategoryPageComponent/PetDetail/PetDetail.styles";
 import ExploreNowButton from '../../Shared/Buttons/ExploreNowButton/ExploreNow';
 import ChatButton from '../../../components/Shared/Buttons/ChatButton/ChatButton.jsx';
-import PetsOptions from '../PetsOptions/PetsOptions.jsx';
 import { useCurrency } from "@/app/assets/Functions/CurrencyContext";
 
 
@@ -149,7 +148,6 @@ export default function PetDetail({ params }) {
                     </Styles.PetDescription>
                 </Styles.PetInfoContainer>
             </Styles.DesktopDetails>
-            <PetsOptions />
         </Styles.PetDetailSection>
     );
 }
