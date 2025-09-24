@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Instagram = ({
+const InstagramIcon = ({
   size = 24,
   color = 'var(--color-neutral-00)',
   className,
@@ -34,4 +34,4 @@ const Instagram = ({
   );
 };
 
-export default Instagram;
+export default InstagramIcon;

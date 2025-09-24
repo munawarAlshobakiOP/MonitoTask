@@ -1,7 +1,7 @@
 "use client";
 import UpDownArrow from '@/app/assets/icons/UpDownArrow.jsx';
 import * as Styles from './Filters.styles';
-import { FilterGender, FilterColor, FilterBreed, colorMap } from '@/app/Data/data';
+import data from '@/app/Data/data.json';
 
 export default function Filters({
   selectedGender, setSelectedGender,
@@ -38,7 +38,7 @@ export default function Filters({
                 <Styles.FilterSection>
                     <Styles.FilterLabel>Gender</Styles.FilterLabel>
                     <Styles.GenderCheckboxContainer>
-                        {FilterGender.map(gender => (
+                        {data.FilterGender.map(gender => (
                             <Styles.OptionRow key={gender}>
                                 <Styles.FilterOption
                                     type="radio"
@@ -56,7 +56,7 @@ export default function Filters({
                 <Styles.FilterSection>
                     <Styles.FilterLabel>Color</Styles.FilterLabel>
                     <Styles.ColorCheckboxContainer>
-                        {FilterColor.map(color => (
+                        {data.FilterColor.map(color => (
                             <Styles.OptionRow key={color}>
                                 <Styles.FilterOption
                                     type="radio"
@@ -103,7 +103,7 @@ export default function Filters({
                 <Styles.FilterSection>
                     <Styles.FilterLabel>Breed</Styles.FilterLabel>
                     <Styles.BreedCheckboxContainer>
-                        {FilterBreed.map(breed => (
+                        {data.FilterBreed.map(breed => (
                             <Styles.OptionRow key={breed}>
                                 <Styles.FilterOption
                                     type="radio"

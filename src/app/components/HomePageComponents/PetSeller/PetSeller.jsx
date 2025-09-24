@@ -1,6 +1,6 @@
 "use client";
 import ViewMoreButton from '@/app/components/Shared/Buttons/ViewMoreButton/ViewMoreButon.jsx';
-import { PetFoodBrands } from '@/app/Data/data';
+import data from '@/app/Data/data.json';
 import * as Styles from './PetSeller.styles';
 export default function PetSeller() {
 return (
@@ -14,7 +14,7 @@ return (
 
 <Styles.PetSellerBrands>
     
-{PetFoodBrands.map((brand) => (
+{data.PetFoodBrands.map((brand) => (
     <Styles.PetSellerBrandContainer key={brand.id}>
         <Styles.PetSellerBrandImage src={brand.image} alt={brand.name} />
     </Styles.PetSellerBrandContainer>

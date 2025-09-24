@@ -192,6 +192,9 @@ export const PetDetailSection = styled.section`
   background: var(--color-neutral-00);
   border: 1px solid var(--color-neutral-10);
   border-radius: 20px;
+  @media (max-width: 768px) {}
+  border:none;
+  
 `;
 export const ArrowContainer = styled.div`
   justify-content: center;
@@ -205,6 +208,10 @@ export const ArrowContainer = styled.div`
   background: rgba(255, 255, 255, 0.4);
   border-radius: 1.25rem;
   display: inline-flex;
+  @media (max-width: 768px) {
+    width: 2rem;
+    height: 2rem;
+  }
 `;
 export const PetSelectionImage = styled.div`
   position: relative;

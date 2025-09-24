@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { useCurrency } from '../../../assets/Functions/CurrencyContext';
 
 import * as Styles from './NavBar.style.js';
-import { Navlinks,Currency } from "@/app/Data/data.js";
+import data from "@/app/Data/data.json";
 import SearchIcon from '@/app/assets/icons/SearchIcon.jsx';
 import CurrencySelectIcon from "@/app/assets/icons/CurrencySelectIcon.jsx";
 import MobileMenuIcon from '@/app/assets/icons/MobileMenuIcon.jsx';
@@ -26,7 +26,7 @@ export default function Navbar() {
         </Styles.LogoContainer>
         <Styles.DesktopNavLinks>
           <Styles.NavList>
-            {Navlinks.map((link) => (
+            {data.Navlinks.map((link) => (
               <Styles.NavItem key={link.name}>
                 <Styles.NavLink href={link.path}>{link.name}</Styles.NavLink>
               </Styles.NavItem>
@@ -48,8 +48,8 @@ export default function Navbar() {
         <Styles.CurrencySection>
           <Styles.CurrencyDropdown onClick={() => setIsDropdownOpen(!isDropdownOpen)}>
             <Styles.CurrencySelected>
-              {Currency.filter(c => c.code === currency)[0] && (
-                <img src={Currency.filter(c => c.code === currency)[0].logo} alt={currency} width="20" height="20" />
+              {data.Currency.filter(c => c.code === currency)[0] && (
+                <img src={data.Currency.filter(c => c.code === currency)[0].logo} alt={currency} width="20" height="20" />
               )}
               <span>{currency}</span>
             </Styles.CurrencySelected>
@@ -58,9 +58,9 @@ export default function Navbar() {
             </Styles.CurrencyArrow>
             {isDropdownOpen && (
               <Styles.CurrencyOptions>
-                {Currency.map((c) => (
-                  <Styles.CurrencyOption 
-                    key={c.code} 
+                {data.Currency.map((c) => (
+                  <Styles.CurrencyOption
+                    key={c.code}
                     onClick={(e) => {
                       e.stopPropagation();
                       setCurrency(c.code);
@@ -79,7 +79,7 @@ export default function Navbar() {
 
       <Styles.MobileMenuOverlay open={isMobileMenuOpen} onClick={() => setIsMobileMenuOpen(false)} aria-hidden={!isMobileMenuOpen}>
         <Styles.MobileMenuContent onClick={e => e.stopPropagation()}>
-          {Navlinks.map((link) => (
+          {data.Navlinks.map((link) => (
             <Styles.MobileMenuLinkContainer key={link.name}>
               <Styles.MobileMenuLink href={link.path}>{link.name}</Styles.MobileMenuLink>
             </Styles.MobileMenuLinkContainer>

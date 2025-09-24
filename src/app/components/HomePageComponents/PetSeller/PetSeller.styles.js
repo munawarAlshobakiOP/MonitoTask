@@ -30,7 +30,7 @@ padding: 0rem;
 gap: 1rem;
 justify-content: space-between;
 height: 2.75rem;
-gap:60rem;
+gap:57.8rem;
 
 `;
 
@@ -80,7 +80,7 @@ align-items: center;
 justify-content: center;
 width: 73.75rem;
 height: 7rem;
-gap: 3.9rem;
+gap: 3.6rem;
 padding-left: 6rem;
 `;
 

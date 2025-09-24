@@ -1,5 +1,5 @@
 "use client";
-import { Products } from '@/app/Data/data';
+import data from '@/app/Data/data.json';
 import ViewMoreButton from "@/app/components/Shared/Buttons/ViewMoreButton/ViewMoreButon.jsx";
 import * as Styles from './ProductList.styles';
 import ProductCard from '@/app/components/Shared/Cards/ProductCard/ProductCard';
@@ -20,7 +20,7 @@ const ProductList = () => {
                         </Styles.ViewMoreButtonDesktop>
                 </Styles.ProductsListHeader>
                 <Styles.ProductsListGrid>
-                    {Products.slice(0, 8).map((product) => (
+                    {data.Products.slice(0, 8).map((product) => (
                         <Styles.ProductCardLink key={product._id} href={`/`}>
                             <ProductCard product={product} />
                         </Styles.ProductCardLink>

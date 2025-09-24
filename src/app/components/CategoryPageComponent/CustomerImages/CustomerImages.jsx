@@ -1,4 +1,4 @@
-import { CustomerImages } from '@/app/Data/data.js';
+import data from '@/app/Data/data.json';
 import * as Styles from './CustomerImages.styles';
 export default function CustomerImagesGallery() {
   return (
@@ -6,12 +6,12 @@ export default function CustomerImagesGallery() {
   <Styles.CustomerContainer>
       <Styles.SectionTitle>Our lovely customer</Styles.SectionTitle>
       <Styles.ImagesContainer>
-        {CustomerImages.map((image, index) => (
+        {data.CustomerImages.map((image, index) => (
           <Styles.Image key={image + index} src={image} alt={`Customer Image ${index + 1}`} />
         ))}
       </Styles.ImagesContainer>
           <Styles.ImageIndicators>
-        {CustomerImages.map((_, idx) => (
+        {data.CustomerImages.map((_, idx) => (
           <Styles.ImageIndicator key={idx} />
         ))}
       </Styles.ImageIndicators>

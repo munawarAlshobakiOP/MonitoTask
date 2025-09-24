@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import * as Styles from './SortButton.styles';
-import {sortOptions} from '@/app/Data/data';
+import data  from '@/app/Data/data.json';
 import CurrencySelectIcon from '@/app/assets/icons/CurrencySelectIcon.jsx';
 export default function SortButton({ selectedOption, setSelectedOption }) {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -26,7 +26,7 @@ export default function SortButton({ selectedOption, setSelectedOption }) {
       </Styles.SortButton>
       {isDropdownOpen && (
         <Styles.SortDropdown>
-          {sortOptions.map(option => (
+          {data.sortOptions.map(option => (
             <Styles.SortDropdownItem
               key={option}
               onClick={() => handleOptionClick(option)}

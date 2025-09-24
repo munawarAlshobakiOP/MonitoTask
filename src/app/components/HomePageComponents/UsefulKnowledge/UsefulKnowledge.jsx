@@ -1,7 +1,7 @@
 "use client";
 import * as Styles from './UsefulKnowledge.styles';
 import ViewMoreButton from "@/app/components/Shared/Buttons/ViewMoreButton/ViewMoreButon.jsx";
-import { knowledge } from '@/app/Data/data';
+import data from '@/app/Data/data.json';
 import UsefulKnowledgeCard from '@/app/components/Shared/Cards/UsefulKnowledgeCard/UsefulKnowledgeCard';
 export default function UsefulKnowledge() {
     return (
@@ -19,7 +19,7 @@ export default function UsefulKnowledge() {
 
                 </Styles.KnowledgeHeader>
                 <Styles.KnowledgeList>
-                    {knowledge.map((item, index) => (
+                    {data.knowledge.map((item, index) => (
                         <UsefulKnowledgeCard key={index} knowledge={item} />
                     ))}
                 </Styles.KnowledgeList>

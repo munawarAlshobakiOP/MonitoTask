@@ -1,7 +1,7 @@
 import * as Styles from './PetList.styles';
 import PetCard from '@/app/components/Shared/Cards/PetCard/PetCard';
 import SortButton from '@/app/components/Shared/Buttons/SortButton/SortButton';
-import { Dogs } from '@/app/Data/data';
+import data from '@/app/Data/data.json';
 import { useState } from 'react';
 import RenderPageNumbers from '@/app/components/Shared/Pagination/RenderPageNumbers';
 import getSortedDogs from '@/app/assets/Functions/SortFunction';
@@ -12,7 +12,7 @@ export default function PetList({ selectedGender, selectedBreed, selectedColor, 
     const [currentPage, setCurrentPage] = useState(1);
     const petsPerPage = 15;
 
-    const filteredDogs = filterDogs(Dogs, {
+    const filteredDogs = filterDogs(data.Dogs, {
   gender: selectedGender,
   breed: selectedBreed,
   color: selectedColor,
@@ -37,7 +37,7 @@ export default function PetList({ selectedGender, selectedBreed, selectedColor, 
             )}
             <Styles.PetListHeader>
                 <Styles.PetListTitle>
-                    Small Dog <Styles.NumberOfPets> &nbsp; {Dogs.length} puppies</Styles.NumberOfPets>
+                    Small Dog <Styles.NumberOfPets> &nbsp; {data.Dogs.length} puppies</Styles.NumberOfPets>
                 </Styles.PetListTitle>
                 {!isMobile && (
                     <SortButton 

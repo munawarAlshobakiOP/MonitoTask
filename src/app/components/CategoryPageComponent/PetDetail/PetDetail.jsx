@@ -1,4 +1,4 @@
-import { Dogs, SocialMediaIcons } from '@/app/Data/data.js'; 
+import data from '@/app/Data/data.json'; 
 import React, { useState, useContext } from 'react';
 import NextLeftArrow from "@/app/assets/icons/NextLeftArrow";
 import HealthIcon from "@/app/assets/icons/HealthIcon";
@@ -9,7 +9,16 @@ import * as Styles from "@/app/components/CategoryPageComponent/PetDetail/PetDet
 import ExploreNowButton from '../../Shared/Buttons/ExploreNowButton/ExploreNow';
 import ChatButton from '../../../components/Shared/Buttons/ChatButton/ChatButton.jsx';
 import { useCurrency } from "@/app/assets/Functions/CurrencyContext";
-
+import  FacebookIcon  from "@/app/assets/icons/FacebookIcon";
+import  TwitterIcon  from "@/app/assets/icons/TwitterIcon";
+import  YoutubeIcon  from "@/app/assets/icons/YoutubeIcon";
+import  InstagramIcon  from "@/app/assets/icons/InstagramIcon";
+const iconMap = {
+  facebook: FacebookIcon,
+  twitter: TwitterIcon,
+  youtube: YoutubeIcon,
+  instagram: InstagramIcon,
+};
 
 export default function PetDetail({ params }) {
     let petId;
@@ -22,7 +31,7 @@ export default function PetDetail({ params }) {
             petId = urlParams.get('Pet') || urlParams.get('id');
         }
     }
-    const pet = Dogs.find((p) => p._id === parseInt(petId));
+    const pet = data.Dogs.find((p) => p._id === parseInt(petId));
     const [selectedImageIndex, setSelectedImageIndex] = useState(0);
     const { currency, convert } = useCurrency();
     if (!pet) {
@@ -55,14 +64,14 @@ export default function PetDetail({ params }) {
                 <Styles.ShareSocialMedia>
                     <Styles.ShareTitle> <ShareIcon />Share:</Styles.ShareTitle>
                     <Styles.SocialIcons>
-                        {SocialMediaIcons.map((iconObj, index) => {
-                            const Icon = iconObj.component;
-                            return (
-                                <Styles.IconWrapper key={index}>
-                                    <Icon />
-                                </Styles.IconWrapper>
-                            );
-                        })}
+                   {data.SocialMediaIcons.map((iconObj, index) => {
+  const Icon = iconMap[iconObj.key];
+  return (
+    <Styles.IconWrapper key={index}>
+      <Icon />
+    </Styles.IconWrapper>
+  );
+})}
                     </Styles.SocialIcons>
                 </Styles.ShareSocialMedia>
                 <Styles.MobileDetails>

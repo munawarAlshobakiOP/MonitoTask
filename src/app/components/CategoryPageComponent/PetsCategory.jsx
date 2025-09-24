@@ -1,10 +1,6 @@
 import * as Styles from "./PetsCategory.styles";
 import PetList from "./PetList/PetList";
 import Filters from "./Filters/Filters";
-import styled from "styled-components";
-
-
-
 import { useState } from "react";
 
 export default function PetsCategory() {

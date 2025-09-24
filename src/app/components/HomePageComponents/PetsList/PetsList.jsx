@@ -1,7 +1,7 @@
 "use client";
 import ViewMoreButton from "@/app/components/Shared/Buttons/ViewMoreButton/ViewMoreButon.jsx";
 import * as Styles from './PetsList.styles';
-import { Dogs } from '@/app/Data/data';
+import  data  from '@/app/Data/data.json';
 import PetCard from '@/app/components/Shared/Cards/PetCard/PetCard';
 
 export default function PetsList() {
@@ -18,8 +18,8 @@ export default function PetsList() {
                 </Styles.ViewMoreButtonDesktop>
         </Styles.PetsListHeader>
 <Styles.PetsListGrid>
-{Dogs.slice(0, 8).map((pet) => (
-    <Styles.PetCardLink key={pet._id} href={`/pet/${pet._id}`}>
+{data.Dogs.slice(0, 8).map((pet) => (
+    <Styles.PetCardLink key={pet._id} href={`/category/${pet._id}`}>
         <PetCard pet={pet} />
     </Styles.PetCardLink>
 ))}

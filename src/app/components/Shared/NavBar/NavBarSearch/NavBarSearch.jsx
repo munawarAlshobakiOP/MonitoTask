@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { Dogs } from "@/app/Data/data.js";
+import data  from "@/app/Data/data.json";
 import SearchCard from "@/app/components/Shared/Cards/SearchCard/SearchCard.jsx";
 import * as Styles from "./NavBarSearch.styles.js";
 export default function NavbarSearch() {
@@ -13,7 +13,7 @@ export default function NavbarSearch() {
 		setQuery(value);
 		if (value.length > 0) {
 			setResults(
-				Dogs.filter((pet) =>
+				data.Dogs.filter((pet) =>
 					pet.title.toLowerCase().includes(value.toLowerCase())
 				)
 			);
@@ -25,7 +25,7 @@ export default function NavbarSearch() {
 	const handleSelect = (pet) => {
 		setQuery("");
 		setResults([]);
-		router.push(`/category?search=${encodeURIComponent(query)}&Pet=${pet._id}`); 
+		router.push(`/category/${pet._id}`);
 	};
 
 	return (
